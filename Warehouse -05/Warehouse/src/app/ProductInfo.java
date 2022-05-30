@@ -28,6 +28,9 @@ public class ProductInfo {
         weight = scanner.nextDouble();
         System.out.print("Product quantity (pcs.): ");
         quantity = scanner.nextInt();
+        System.out.println("Enter price");
+        System.out.println("Product price " + " (" + CURRENCY + "): " );
+        totalPrice = scanner.nextDouble();
         scanner.close();
     }
 
