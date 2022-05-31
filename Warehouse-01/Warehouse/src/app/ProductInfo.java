@@ -12,6 +12,7 @@ public class ProductInfo {
     static double totalWeight;
     static String totalWeightRounded;
     static private final String MEASURE = "kg";
+    static private final String CURRENCY = "$";
 
     public static void main(String[] args) {
         doInputs();
