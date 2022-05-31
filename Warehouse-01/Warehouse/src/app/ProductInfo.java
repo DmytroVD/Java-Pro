@@ -14,7 +14,7 @@ public class ProductInfo {
     static private final String MEASURE = "kg";
     static private final String CURRENCY = "$";
     static double totalPrice;
-
+    static String totalPriceRounded;
 
 
     public static void main(String[] args) {
