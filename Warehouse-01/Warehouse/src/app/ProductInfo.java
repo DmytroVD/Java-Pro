@@ -43,10 +43,13 @@ public class ProductInfo {
 
         totalWeight = getTotalWeight(product.getWeight(), quantity);
         totalWeightRounded = getTotalWeightRounded(totalWeight);
+        totalPrice = getTotalPrice(totalWeight, price);
+        totalPriceRounded = getTotalPriceRounded(totalPrice);
+
 
         return "------------------------\n" +
                 "Product total weight " + name + " (" + MEASURE + "): "
-                + totalWeightRounded;
+                + totalWeightRounded+ "\n Product price (" + CURRENCY + "): " + totalPriceRounded;
     }
 
     // Метод рассчета общего веса.
@@ -59,8 +62,17 @@ public class ProductInfo {
         return Rounder.roundWeight(totalWeight);
     }
 
-    // Метод вывода в консоль.
-    static private void showInfo(String output) {
-        System.out.println(output);
+    static private double getTotalPrice(double totalWeight, double price) {
+        return totalWeight * price;
     }
+
+    static private String getTotalPriceRounded(double totalPrice) {
+        return Rounder.roundPrice(totalPrice);
+    }
+
+        // Метод вывода в консоль.
+        static private void showInfo (String output){
+            System.out.println(output);
+        }
+
 }
