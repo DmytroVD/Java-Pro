@@ -14,6 +14,7 @@ public class Rounder {
     public static String roundPrice(double value) {
         DecimalFormat df = new DecimalFormat("0.000");
         return df.format(value);
+
     }
 
 }
