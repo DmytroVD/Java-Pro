@@ -47,7 +47,7 @@ public class ProductInfo {
 
         return "------------------------\n" +
                 "Product total weight " + name + " (" + MEASURE + "): "
-                + totalWeightRounded;
+                + totalWeightRounded+ "\n Product price (" + CURRENCY + "): " + totalPriceRounded;
     }
 
     // Метод рассчета общего веса.
