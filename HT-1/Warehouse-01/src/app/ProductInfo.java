@@ -6,6 +6,7 @@ public class ProductInfo {
 
     static String name;
     static double weight;
+    static double price;
     static int quantity;
     static Product product;
     static double totalWeight;
