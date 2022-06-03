@@ -16,6 +16,7 @@ public class ProductInfo {
     static double totalPrice;
     static String totalPriceRounded;
 
+
     public static void main(String[] args) {
         doInputs();
         showInfo(handleData());
@@ -29,8 +30,6 @@ public class ProductInfo {
         weight = scanner.nextDouble();
         System.out.print("Product quantity (pcs.): ");
         quantity = scanner.nextInt();
-        System.out.println("Product price" + " (" + CURRENCY + "): " );
-        price = scanner.nextDouble();
         scanner.close();
     }
 
@@ -48,8 +47,7 @@ public class ProductInfo {
 
         return "------------------------\n" +
                 "Product total weight " + name + " (" + MEASURE + "): "
-                + totalWeightRounded + "\n Product price (" + CURRENCY + "): " + totalPriceRounded;
-
+                + totalWeightRounded+ "\n Product price (" + CURRENCY + "): " + totalPriceRounded;
     }
 
     // Метод рассчета общего веса.
@@ -61,15 +59,13 @@ public class ProductInfo {
     static private String getTotalWeightRounded(double totalWeight) {
         return Rounder.roundWeight(totalWeight);
     }
-
-        static private double getTotalPrice(double totalWeight, double price) {
+    static private double getTotalPrice(double totalWeight, double price) {
         return totalWeight * price;
     }
 
-        static private String getTotalPriceRounded(double totalPrice) {
+    static private String getTotalPriceRounded(double totalPrice) {
         return Rounder.roundPrice(totalPrice);
     }
-
 
 
 
