@@ -52,6 +52,11 @@ public class ProductInfo {
     static private String getTotalWeightRounded(double totalWeight) {
         return Rounder.roundWeight(totalWeight);
     }
+    static private double getTotalPrice(double totalWeight, double price) {
+        return totalWeight * price;
+    }
+
+
 
     // Метод вывода в консоль.
     static private void showInfo(String output) {
