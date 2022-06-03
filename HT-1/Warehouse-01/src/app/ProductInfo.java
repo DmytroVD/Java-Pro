@@ -6,15 +6,11 @@ public class ProductInfo {
 
     static String name;
     static double weight;
-    static double price;
     static int quantity;
     static Product product;
     static double totalWeight;
     static String totalWeightRounded;
     static private final String MEASURE = "kg";
-    static private final String CURRENCY = "$";
-    static double totalPrice;
-    static String totalPriceRounded;
 
     public static void main(String[] args) {
         doInputs();
@@ -29,8 +25,6 @@ public class ProductInfo {
         weight = scanner.nextDouble();
         System.out.print("Product quantity (pcs.): ");
         quantity = scanner.nextInt();
-        System.out.println("Product price" + " (" + CURRENCY + "): " );
-        price = scanner.nextDouble();
         scanner.close();
     }
 
@@ -42,14 +36,10 @@ public class ProductInfo {
 
         totalWeight = getTotalWeight(product.getWeight(), quantity);
         totalWeightRounded = getTotalWeightRounded(totalWeight);
-        totalPrice = getTotalPrice(totalWeight, price);
-        totalPriceRounded = getTotalPriceRounded(totalPrice);
-
 
         return "------------------------\n" +
                 "Product total weight " + name + " (" + MEASURE + "): "
-                + totalWeightRounded + "\n Product price (" + CURRENCY + "): " + totalPriceRounded;
-
+                + totalWeightRounded;
     }
 
     // Метод рассчета общего веса.
@@ -61,17 +51,6 @@ public class ProductInfo {
     static private String getTotalWeightRounded(double totalWeight) {
         return Rounder.roundWeight(totalWeight);
     }
-
-        static private double getTotalPrice(double totalWeight, double price) {
-        return totalWeight * price;
-    }
-
-        static private String getTotalPriceRounded(double totalPrice) {
-        return Rounder.roundPrice(totalPrice);
-    }
-
-
-
 
     // Метод вывода в консоль.
     static private void showInfo(String output) {
