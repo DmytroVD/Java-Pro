@@ -55,6 +55,10 @@ public class ProductInfo {
     static private double getTotalPrice(double totalWeight, double price) {
         return totalWeight * price;
     }
+    static private String getTotalPriceRounded(double totalPrice) {
+        return Rounder.roundPrice(totalPrice);
+    }
+
 
 
 
