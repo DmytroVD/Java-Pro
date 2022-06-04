@@ -20,6 +20,8 @@ public class Merchant {
     public String getPhone() {
         return phone;
     }
-
+    public String getSurname() {
+        return surname;
+    }
 
 }
