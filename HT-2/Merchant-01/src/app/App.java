@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class App {
 
     static String merchantName;
+    static String merchantSurname;
     static String email;
     static String phone;
     static String productName;
